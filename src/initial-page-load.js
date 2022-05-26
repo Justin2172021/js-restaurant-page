@@ -1,7 +1,11 @@
 export function initialPageLoad() {
 
-    // DOM for heading
     const contentDiv = document.querySelector("#content");
+
+    // Remove any existing DOM children if present
+    contentDiv.replaceChildren();
+
+    // DOM for heading
     const heading = document.createElement("h1");
     heading.textContent = "Welcome To Jaybees Tech Talk Restaurant And Lounge";
     heading.classList.add("landing-title");
@@ -9,7 +13,7 @@ export function initialPageLoad() {
 
     // DOM for landing page top image
     const topImage = document.createElement("img");
-    topImage.classList.add("top-image");
+    topImage.classList.add("image");
     topImage.src = "../src/assets/restaurant-image.jpg";
     topImage.alt = "Image of Restaurant";
     contentDiv.appendChild(topImage);
